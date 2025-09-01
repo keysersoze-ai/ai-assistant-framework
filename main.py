@@ -53,7 +53,8 @@ class MemorySystem:
     
     def get_relevant_context(self, query: str, limit: int = 5) -> List[Message]:
         """Retrieve relevant memories for the given query"""
-        # Simple relevance scoring based on content overlap
+        # TODO: Implement vector embeddings for better semantic search
+        # For now using simple word overlap - works surprisingly well
         relevant = []
         query_words = set(query.lower().split())
         
